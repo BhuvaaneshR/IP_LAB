@@ -1,0 +1,8 @@
+div{
+    display: flex;
+    align-items: flex-start;
+}
+ul{
+    list-style: square;
+    font-size: x-large;
+}

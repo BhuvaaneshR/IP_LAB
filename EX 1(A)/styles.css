@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.resume {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.left, .right {
+    padding: 20px;
+}
+.left {
+    width: 30%;
+    background: #283593;
+    color: white;
+}
+.left h2, .left h3 {
+    color: #ffeb3b;
+}
+.left img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.left ul {
+    list-style: none;
+    padding: 0;
+}
+.left ul li {
+    margin-bottom: 10px;
+}
+.right {
+    width: 70%;
+}
+.right h2 {
+    color: #283593;
+    border-bottom: 2px solid #283593;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.right p, .right ul {
+    margin-bottom: 20px;
+}
+.right ul {
+    list-style: none;
+    padding: 0;
+}
+.right ul li {
+    margin-bottom: 10px;
+}
+.bar {
+    display: block;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.bar span {
+    display: block;
+    height: 100%;
+    background: #ffeb3b;
+}
+.html { width: 90%; }
+.css { width: 80%; }
+.c-programming { width: 70%; }
+.java { width: 92%; }
+.sql{ width: 80%;}
+.profile{
+    width: 60%;
+    height: 300px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scripts.js">
+    <link rel="icon" href="img/icon.jpg">
+</head>
+
+<body>
+    <center>
+    <div class="outline">
+
+        <form id="course-registration-form" onsubmit="return validateForm()">
+            <h2>COURSE REGISTRATION</h2>
+
+            <div class="form-group">
+                <label for="roll-no">Roll No:</label>
+                <input type="text" id="roll-no" name="roll-no" required maxlength="9" pattern="\d{9}">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dept">Department:</label>
+                <select id="dept" name="dept" required>
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="AUTO">AUTO</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="EEE">EEE</option>
+                    <option value="IT">IT</option>
+                    <option value="AIML">AIML</option>
+                    <option value="AIDS">AIDS</option>
+                    <option value="CSD">CSD</option>
+                    <option value="CSBS">CSBS</option>
+                    <option value="R&A">R&A</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="">Select Year</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="sem">Semester:</label>
+                <select id="sem" name="sem" required>
+                    <option value="">Select Semester</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="academic-year">Academic Year:</label>
+                <select id="academic-year" name="academic-year" required>
+                    <option value="">Select Academic Year</option>
+                    <option value="2021-2022">2021-2022</option>
+                    <option value="2022-2023">2022-2023</option>
+                    <option value="2023-2024">2023-2024</option>
+                    <option value="2024-2025">2024-2025</option>
+                    <option value="2024-2025">2025-2026</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="regulation">Regulation:</label>
+                <select id="regulation" name="regulation" required>
+                    <option value="">Select Regulation</option>
+                    <option value="R16">R16</option>
+                    <option value="R17">R17</option>
+                    <option value="R18">R18</option>
+                    <option value="R19">R19</option>
+                    <option value="R20">R20</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="course-type">Course Type (Core/PE/OE):</label>
+                <select id="course-type" name="course-type" required>
+                    <option value="">Select Course Type</option>
+                    <option value="CORE">Core</option>
+                    <option value="PE">PE</option>
+                    <option value="OE">OE</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="sub-code">Subject Code:</label>
+                <input type="text" id="sub-code" name="sub-code" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sub-name">Subject Name:</label>
+                <input type="text" id="sub-name" name="sub-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="credits">No. of Credits:</label>
+                <input type="number" id="credits" name="credits" required min="1" max="6">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Type (T/L/LOT):</label>
+                <input type="text" id="type" name="type" required>
+            </div>
+
+            <div class="submit-btn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</center>
+</body>
+
+</html>
