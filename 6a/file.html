@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest Example</title>
+    <script>
+        function loadXMLDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("server-info").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "rec.txt", true);
+            xhttp.send();
+        }
+    </script>
+    <style>
+        div {
+            height: auto;
+            width: 30%;
+            padding: 2%;
+            border-radius: 15px;
+            margin-bottom: 2%;
+            border: solid 3px rgb(62, 158, 213);
+            background-color: rgb(16, 139, 200);
+            box-shadow: 0 4px 4px rgb(62, 158, 213),
+                0 4px 4px rgb(41, 41, 213);
+            font-size: 20px;
+            color: white;
+            text-align: justify;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        button {
+            border-radius: 25px;
+            border: solid 3px rgb(62, 158, 213);
+            background-color: rgb(16, 139, 200);
+            color: white;
+            cursor: pointer;
+            padding: 0.5%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 750;
+            box-shadow: 0 4px 4px rgb(62, 158, 213),
+                0 4px 4px rgb(41, 41, 213);
+            transition-duration: 0.5s;
+        }
+
+        button:hover {
+            background-color: rgb(6, 115, 250);
+            transform: translateY(-0.4em);
+            font-weight: 750;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            box-shadow: 0 12px 8px rgb(61, 169, 232);
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="server-info">Information about RAJALAKSHMI ENGINEERING COLLEGE.</div>
+        <button onclick="loadXMLDoc()">GET INFO</button>
+    </center>
+</body>
+
+</html>
