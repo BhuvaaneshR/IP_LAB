@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK MANAGER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>TASK MANAGER</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <button class="statusbtn" id="all">ALL</button>
+            <button class="statusbtn" id="pending">PENDING</button>
+            <button class="statusbtn" id="completed">COMPLETED</button>
+        </aside>
+        <main>
+            <form class="tform" action="#">
+                <h2>ADD YOUR TASK HERE!</h2>
+                <input type="text" id="title" name="title" placeholder="Title">
+                <textarea name="desc" id="desc" placeholder="Title Description"></textarea>
+                <input type="date" name="dateinput" id="dateinput">
+                <button class="addtask">ADD TASK</button>
+            </form>
+        </main>
+        <div class="tasks">
+            <h2 style="margin-top: 30px;">TASKS</h2><br>
+            <div class='list' style="gap: 39px;">
+                <h3>TITLE</h3>
+                <h3>DESCRIPTION</h3>
+                <h3>DUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <h3>EDIT</h3>
+                <h3>DELETE</h3>
+                <h3>STATUS</h3>
+            </div>
+            <ul class="taskslist">
+
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="nav-link">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <p>&copy; Task Manager 2024.All rights reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
