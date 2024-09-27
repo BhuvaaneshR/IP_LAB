@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURSE REGISTRATION </title>
+    <link rel="stylesheet" href="servlet.css">
+    <link rel="stylesheet" href="scripts.js">
+    <link rel="icon" href="img/icon.jpg">
+</head>
+
+<body>
+    <center>
+    <div class="outline">
+
+        <form id="course-registration-form" action="servv" method="post">
+            <h2>COURSE REGISTRATION FORM</h2>
+
+            
+            <div class="form-group">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="roll-no">Roll No:</label>
+                <input type="number" id="roll-no" name="roll-no" required maxlength="9" pattern="\d{9}" oninput="if(this.value.length > 9) this.value = this.value.slice(0, 9);">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="">Select Year</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dept">Department:</label>
+                <select id="dept" name="dept" required>
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="AUTO">AUTO</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="EEE">EEE</option>
+                    <option value="IT">IT</option>
+                    <option value="AIML">AIML</option>
+                    <option value="AIDS">AIDS</option>
+                    <option value="CSD">CSD</option>
+                    <option value="CSBS">CSBS</option>
+                    <option value="R&A">R&A</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="sec">Section:</label>
+                <select id="sec" name="sec" required>
+                    <option value="">Select Section</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mob-no">Mobile No:</label>
+                <input type="number" id="mob-no" name="mob-no" required minlength="10" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);">
+            </div>
+
+            <div class="form-group">
+                <label for="mail">EMAIL ID:</label>
+                <input type="email" id="mail" name="mail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea name="address" id="address"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="city">Enter your City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Enter your Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pincode">Enter your pincode:</label>
+                <input type="number" id="pincode" name="pincode" required minlength="6" maxlength="6" oninput="if(this.value.length > 6) this.value = this.value.slice(0, 6);">
+            </div>
+
+            <div class="submit-btn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</center>
+</body>
+
+</html>
