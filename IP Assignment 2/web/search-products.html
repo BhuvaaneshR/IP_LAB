@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+<head>
+    <title>Search Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Search Products</h1>
+    <form id="search-products-form">
+        <label for="query">Query:</label>
+        <input type="text" id="query" name="query"><br><br>
+        <input type="submit" value="Search">
+    </form>
+    <table id="search-results-table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </table>
+
+    <script>
+        const form = document.getElementById('search-products-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const query = document.getElementById('query').value;
+
+            fetch('/SearchProductsServlet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    query: query
+                })
+            })
+            .then((response) => response.json())
+            .then((products) => {
+                const table = document.getElementById('search-results-table');
+                products.forEach((product) => {
+                    const row = table.insertRow();
+                    row.innerHTML = `
+                        <td>${product.id}</td>
+                        <td>${product.name}</td>
+                        <td>${product.category}</td>
+                        <td>${product.price}</td>
+                        <td>${product.stock}</td>
+                    `;
+                });
+            })
+            .catch((error) => console.error(error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>View Products</h1>
+    <table id="products-table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+    <script>
+        fetch('/ViewProductsServlet')
+        .then((response) => response.json())
+        .then((products) => {
+            const table = document.getElementById('products-table');
+            products.forEach((product) => {
+                const row = table.insertRow();
+                row.innerHTML = `
+                    <td>${product.id}</td>
+                    <td>${product.name}</td>
+                    <td>${product.category}</td>
+                    <td>${product.price}</td>
+                    <td>${product.stock}</td>
+                    <td>
+                        <a href="edit-product.html?id=${product.id}">Edit</a>
+                        <a href="delete-product.html?id=${product.id}">Delete</a>
+                    </td>
+                `;
+            });
+        })
+        .catch((error) => console.error(error));
+    </script>
+</body>
+</html>

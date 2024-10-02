@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+<head>
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <form id="edit-product-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category"><br><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price"><br><br>
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock"><br><br>
+        <input type="submit" value="Edit Product">
+    </form>
+    <div id="edit-product-message"></div>
+
+    <script>
+        const id = new URLSearchParams(window.location.search).get('id');
+        fetch(`/ViewProductsServlet?id=${id}`)
+        .then((response) => response.json())
+        .then((product) => {
+            document.getElementById('name').value = product.name;
+            document.getElementById('category').value = product.category;
+            document.getElementById('price').value = product.price;
+            document.getElementById('stock').value = product.stock;
+        })
+        .catch((error) => console.error(error));
+
+        const form = document.getElementById('edit-product-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const category = document.getElementById('category').value;
+            const price = document.getElementById('price').value;
+            const stock = document.getElementById('stock').value;
+
+            fetch('/EditProductServlet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: id,
+                    name: name,
+                    category: category,
+                    price: price,
+                    stock: stock
+                })
+            })
+            .then((response) => response.text())
+            .then((message) => {
+                document.getElementById('edit-product-message').innerHTML = message;
+            })
+            .catch((error) => console.error(error));
+        });
+    </script>
+</body>
+</html>

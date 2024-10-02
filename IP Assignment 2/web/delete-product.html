@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+<head>
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Delete Product</h1>
+    <p>Are you sure you want to delete this product?</p>
+    <button id="delete-product-button">Delete</button>
+    <div id="delete-product-message"></div>
+
+    <script>
+        const id = new URLSearchParams(window.location.search).get('id');
+
+        document.getElementById('delete-product-button').addEventListener('click', () => {
+            fetch('/DeleteProductServlet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: id
+                })
+            })
+            .then((response) => response.text())
+            .then((message) => {
+                document.getElementById('delete-product-message').innerHTML = message;
+            })
+            .catch((error) => console.error(error));
+        });
+    </script>
+</body>
+</html>

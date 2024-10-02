@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/web/edit-product.html</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/src/java/products/DeleteProductServlet.java</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/web/view-products.html</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/src/java/products/SearchProductsServlet.java</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/src/java/products/Product.java</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/src/java/products/AddProductServlet.java</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/web/add-product.html</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/src/java/products/ViewProductsServlet.java</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/web/index.html</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/web/delete-product.html</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/src/java/products/DBConnection.java</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/web/search-products.html</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/web/styles.css</file>
+            <file>file:/C:/Users/lbhar/OneDrive/Documents/NetBeansProjects/Assignment-2-servlet-mysql/src/java/products/EditProductServlet.java</file>
+        </group>
+    </open-files>
+</project-private>
